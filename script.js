@@ -1,7 +1,7 @@
 'use strict';
 
 // ── Constants ────────────────────────────────────────────────
-const DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+const DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 const STORAGE_KEY = 'counter-app-state';
 
 // ── State ────────────────────────────────────────────────────
