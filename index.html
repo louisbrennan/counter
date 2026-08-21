@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1 class="app-title">Case Counter</h1>
+
+      <div class="card">
+        <ul class="counter-list" id="counter-list">
+          <li class="counter-row" data-day="monday">
+            <span class="day-label">Monday</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrement Monday">−</button>
+              <span class="counter-value">0</span>
+              <button class="btn-inc" aria-label="Increment Monday">+</button>
+              <button class="btn-reset-day" aria-label="Reset Monday">↺</button>
+            </div>
+          </li>
+          <li class="counter-row" data-day="tuesday">
+            <span class="day-label">Tuesday</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrement Tuesday">−</button>
+              <span class="counter-value">0</span>
+              <button class="btn-inc" aria-label="Increment Tuesday">+</button>
+              <button class="btn-reset-day" aria-label="Reset Tuesday">↺</button>
+            </div>
+          </li>
+          <li class="counter-row" data-day="wednesday">
+            <span class="day-label">Wednesday</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrement Wednesday">−</button>
+              <span class="counter-value">0</span>
+              <button class="btn-inc" aria-label="Increment Wednesday">+</button>
+              <button class="btn-reset-day" aria-label="Reset Wednesday">↺</button>
+            </div>
+          </li>
+          <li class="counter-row" data-day="thursday">
+            <span class="day-label">Thursday</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrement Thursday">−</button>
+              <span class="counter-value">0</span>
+              <button class="btn-inc" aria-label="Increment Thursday">+</button>
+              <button class="btn-reset-day" aria-label="Reset Thursday">↺</button>
+            </div>
+          </li>
+          <li class="counter-row" data-day="friday">
+            <span class="day-label">Friday</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrement Friday">−</button>
+              <span class="counter-value">0</span>
+              <button class="btn-inc" aria-label="Increment Friday">+</button>
+              <button class="btn-reset-day" aria-label="Reset Friday">↺</button>
+            </div>
+          </li>
+
+        <div class="total-row">
+          <span class="day-label">Total</span>
+          <span class="total-value" id="total-value">0</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Placeholder audio asset — replace click.mp3 with your local file -->
+    <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

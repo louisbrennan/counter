@@ -1,0 +1,167 @@
+/* ── Reset & base ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #f0f2f5;
+  color: #1f2328;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 16px 48px;
+}
+
+/* ── App shell ──────────────────────────────────────────────── */
+.app {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.app-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1f2328;
+  letter-spacing: -0.02em;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* ── Counter list ───────────────────────────────────────────── */
+.counter-list {
+  list-style: none;
+}
+
+.counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.counter-row:last-child {
+  border-bottom: none;
+}
+
+.day-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1f2328;
+  min-width: 88px;
+}
+
+/* ── Controls ───────────────────────────────────────────────── */
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.counter-value {
+  display: inline-block;
+  min-width: 42px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #1f2328;
+}
+
+/* Shared button base */
+.btn-dec,
+.btn-inc {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.12s, transform 0.08s;
+  user-select: none;
+}
+
+.btn-inc {
+  background: #3b82d4;
+  color: #ffffff;
+}
+
+.btn-inc:hover  { background: #2d6fc0; }
+.btn-inc:active { background: #2560a8; transform: scale(0.93); }
+
+.btn-dec {
+  background: #e5e7eb;
+  color: #1f2328;
+}
+
+.btn-dec:hover  { background: #d1d5db; }
+.btn-dec:active { background: #bcc0c8; transform: scale(0.93); }
+
+/* ── Total row ──────────────────────────────────────────────── */
+.total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #f7f8fa;
+  border-top: 2px solid #e5e7eb;
+}
+
+.total-row .day-label {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.total-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: #3b82d4;
+  min-width: 42px;
+  text-align: center;
+}
+
+/* ── Per-day reset button ────────────────────────────────────── */
+.btn-reset-day {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #57606a;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.12s, color 0.12s, transform 0.08s;
+  user-select: none;
+  margin-left: 4px;
+}
+
+.btn-reset-day:hover  { background: #e5e7eb; color: #1f2328; }
+.btn-reset-day:active { background: #d1d5db; transform: scale(0.9); }
+
+/* ── Larger-screen enhancement ─────────────────────────────── */
+@media (min-width: 520px) {
+  .app-title { font-size: 1.6rem; }
+  .counter-row { padding: 14px 20px; }
+  .total-row   { padding: 16px 20px; }
+}
